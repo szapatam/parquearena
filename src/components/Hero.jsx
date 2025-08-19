@@ -7,16 +7,17 @@ export default function Hero() {
         </video>
   
         <div className="content">
-          <h1 className="h1">PARQUE ARENA</h1>
-          <p className="sub">UN LUGAR PARA DISFRUTAR EN EL CORAZÓN DE TEMUCO</p>
+          <img src="parquearena_logo_blanco.png" alt="Parque Arena Logo" />
+          <p className="sub">EL LUGAR DE LOS GRANDES EVENTOS</p>
         </div>
   
-        {/* Flecha que baja al siguiente bloque */}
+        {/* Flecha que baja al siguiente bloque
         <a className="down" href="#panoramas" aria-label="Bajar">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M6 9l6 6 6-6"/>
           </svg>
         </a>
+         */}
       </section>
     );
   }

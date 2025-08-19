@@ -13,22 +13,134 @@ body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#0c0c0c;
 }
 .nav .inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items:center; justify-content:space-between; }
 .brand { font-weight: 900; letter-spacing:.06em; }
-.nav a { color:#f5f5f5; text-decoration:none; font-weight:700; margin:0 12px; opacity:.9 }
-.nav a:hover { opacity:1 }
+.nav a { color:#f5f5f5; text-decoration:none; font-weight:700; margin:0 12px; opacity:.9;}
+.nav a:hover { opacity:1;}
+
+/* NAVBAR CAMBIOS ADICIONALES*/
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre logo y slogan */
+}
+
+.navbar-logo img {
+  height: 135px; /* ajusta según el tamaño que quieras */
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    flex-direction: row;
+  }
+  .navbar-logo img { height: 115px; display: block;}
+}
+
+/* Botón hamburguesa (oculto en desktop) */
+.nav-toggle{
+  display:none;
+  width:42px; height:42px; border-radius:10px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.06);
+  backdrop-filter: blur(4px);
+  align-items:center; justify-content:center;
+  gap:4px; padding:8px; cursor:pointer;
+}
+.nav-toggle img{
+  width: 24px; height: 24px; /* tamaño del ícono */
+  filter: invert(1); /* invierte colores para que se vea bien en fondo oscuro */
+}
+
+/* Las barras del ícono */
+.nav-toggle span{
+  display:block;
+  width:22px; height:2px;
+  background:#fff;               /* -> ahora se ven */
+  border-radius: 2px;
+  transition: .25s;
+}
+
+
+/* ====== MÓVIL ====== */
+@media (max-width: 920px){
+  .navbar-slogan{ display:none; }      /* simplifica header en móvil */
+  .nav-toggle{ display:flex; }         /* mostramos el botón */
+
+  .nav-links{
+    /* Panel deslizante desde la derecha */
+    position: fixed; inset: 64px 0 0 auto;   /* debajo de tu barra (64px) */
+    width: min(84vw, 320px);
+    /*background: rgba(12,12,12,.92);*/
+    backdrop-filter: blur(6px);
+    display: flex; flex-direction: column; gap: 12px;
+    padding: 18px;
+    transform: translateX(100%); transition: transform .28s ease;
+  }
+  .nav-links.is-open{ transform: translateX(0); }
+  .nav-links a{
+    display:block;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color:#ffffff; text-decoration:none; font-weight:700;
+    background: rgba(0, 0, 0, 0.855);
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .nav-links a:hover{ background: rgba(255,255,255,.12); }
+
+  /* Oculta los links en línea (desktop) */
+  .nav-inner .nav-links:not(.is-open){ display:block; } /* el panel es fixed */
+}
+
+/* Backdrop (solo móvil, detrás del panel) */
+.nav-backdrop{
+  position: fixed; inset: 64px 0 0 0;   /* debajo de la barra */
+  background: rgba(0,0,0,.5);
+  animation: fadeIn .2s ease;
+}
+@keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+
+/* ==== FIN-NAV ==== */
+
 
 /* ==== SECCIONES 100vh ==== */
 .section-full { min-height: 100vh; position: relative; display:grid; place-items:center; }
 .section-inner { width:100%; max-width:1200px; padding: 0px 16px 32px; } /* 96px deja espacio por la nav */
 
 /* ==== HERO VIDEO ==== */
-.hero { overflow:hidden; }
+.hero { position: relative; height: 100vh; overflow:hidden; }
 .hero video {
   position:absolute; inset:0; width:100%; height:100%;
   object-fit:cover; filter:brightness(.45);
 }
-.hero .content { position:relative; z-index:1; text-align:center; padding:0 16px; }
+.hero .content {
+  position: relative;
+  z-index: 2;
+
+  /* Flexbox para centrar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra vertical */
+  align-items: center;     /* centra horizontal */
+
+  height: 100%; /* ocupa todo el alto */
+  text-align: center;
+  padding: 0 16px;
+}
 .h1 { font-size:clamp(36px, 6vw, 64px); font-weight:900; letter-spacing:.04em; margin:0 0 12px; }
-.sub { letter-spacing:.25em; opacity:.9 }
+.sub { letter-spacing:.25em; opacity:.9; font-size: 36px;}
+
+.content img{
+  width:min(60vw, 720px);
+  display:block; margin: 0 auto 16px;
+}
+
+/* Responsive móvil */
+@media (max-width: 980px) {
+  .sub {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }}
+
 
 /* ==== FLECHA ABAJO ==== */
 .down {
@@ -40,6 +152,7 @@ body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#0c0c0c;
 .down:hover { opacity:1 }
 .down svg { width:18px; height:18px }
 
+/* ==== FIN-HERO VIDEO ==== */
 
 /* ---- PANORAMAS ---- */
 .section-head { text-align:center; margin-bottom:50px }
