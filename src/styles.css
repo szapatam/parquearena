@@ -394,26 +394,82 @@ body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#0c0c0c;
 
 
 /* ====== SPONSORS ====== */
-.sponsors .section-head { text-align:center; margin-bottom:28px; }
-.sponsors .section-kicker { letter-spacing:.25em; font-weight:700; opacity:.8; margin:0 0 8px; }
-.sponsors .section-title { font-size:clamp(28px,4vw,48px); font-weight:900; letter-spacing:.04em; margin:0; }
+/* ====== RIBBON CAROUSEL (1 fila, auto, centrado) ====== */
 
-.sponsors .logos{
-  list-style:none; padding:0; margin:28px 0 0;
-  display:grid; gap:18px;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+.sponsors-ribbon .ribbon-wrap{
+  position: relative;
+  overflow: hidden;
+
+  /* centrado y ancho controlado */
+  max-width: 980px;
+  margin: 0 auto;
+
+  /* bordes con fade sutil (si tu navegador soporta mask) */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 8%, black 92%, transparent 100%);
 }
-.logo-card{
-  background:#111; border:1px solid #1f1f1f; border-radius:12px;
-  height:96px; display:grid; place-items:center; transition:.2s ease;
+
+/* Cada pista es un flex horizontal */
+.sponsors-ribbon .ribbon-track{
+  display: flex;
+  gap: 18px;
+  padding: 10px 6px;
+  /* Truco: hay dos pistas iguales; al moverse -50% queda la otra donde estaba la primera */
+  animation: ribbon-scroll 22s linear infinite;
 }
-.logo-card:hover{ border-color:#2a2a2a; transform:translateY(-2px); }
-.logo{ max-width:120px; max-height:56px; filter:grayscale(1) brightness(.9); opacity:.85; transition:.25s ease; }
-.logo-card:hover .logo{
-  filter:none; opacity:1;
-  /* pequeño glow al hover */
-  filter: drop-shadow(0 0 6px rgba(167,191,68,.45));
+
+/* Pausa la animación al hover */
+.sponsors-ribbon .ribbon-wrap:hover .ribbon-track{
+  animation-play-state: paused;
 }
+
+/* Tarjeta de logo */
+.sponsors-ribbon .ribbon-card{
+  flex: 0 0 180px;           /* ancho fijo por tarjeta (ajústalo a gusto) */
+  height: 100px;             /* alto del contenedor de logo */
+  display: grid; place-items: center;
+  border: 1px solid #1f1f1f;
+  background: #111;
+  border-radius: 12px;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.sponsors-ribbon .ribbon-card:hover{
+  transform: translateY(-2px);
+  border-color: #2a2a2a;
+}
+
+/* Imagen del logo */
+.sponsors-ribbon .ribbon-card img{
+  max-width: 300px;
+  max-height: 56px;
+  filter: grayscale(1) brightness(.9);
+  opacity: .85;
+  transition: filter .25s ease, opacity .25s ease;
+}
+.sponsors-ribbon .ribbon-card:hover img{
+  filter: none;
+  opacity: 1;
+}
+
+/* Animación continua */
+@keyframes ribbon-scroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* -50% porque hay dos pistas idénticas */
+}
+
+/* Responsive */
+@media (max-width: 680px){
+  .sponsors-ribbon .ribbon-card{
+    flex-basis: 150px;
+    height: 88px;
+  }
+  .sponsors-ribbon .ribbon-card img{
+    max-width: 100px;
+    max-height: 48px;
+  }
+}
+
+
 
 /* ====== FOOTER ====== */
 .footer{ padding: 25px 50px 0px; background:#0a0a0a; border-top:1px solid #161616; }
@@ -485,8 +541,10 @@ body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#0c0c0c;
 /* Opcional: en móvil centramos título/mapa un poco más */
 @media (max-width: 768px){
   .map-title { text-align:left; }
-  .foot-brand { margin-top:4px; }
+  .foot-brand { margin-top:4px; align-items: center; }
   .map-title {text-align: center;}
+  .footer-inner {flex-direction: column;}
+
 }
 
 /* Columna de marca (derecha) */
@@ -513,6 +571,16 @@ body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#0c0c0c;
 /* Opcional: centrar el logo cuando apila */
 @media (max-width: 991px){
   .foot-col--brand{ margin-top: 6px; }
+
+}
+
+@media (max-width: 978px){
+  .foot-col--brand {
+    align-self: center;
+  }
+  .foot-col--map{
+    align-self: center; /* centra horizontalmente */
+  }
 }
 
 .foot-col--map {
@@ -539,7 +607,6 @@ body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#0c0c0c;
   /* tu alto/ancho actuales */
   width: min(100%, 400px);          /* o el ancho que quieras */
   aspect-ratio: 16/10;
-  max-height: 200px;
 
   /* centrado horizontal */
   margin: 12px auto 0;              /* <- esta línea lo centra */

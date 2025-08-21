@@ -13,8 +13,8 @@ export default function App(){
       <NavBar/>
       <Hero/>
       <Panoramas/>
-      <Events/>
       <About/>
+      <Events/>
       <Sponsors/>
       <SiteFooter/>
     </>

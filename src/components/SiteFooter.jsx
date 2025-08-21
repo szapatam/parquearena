@@ -5,13 +5,11 @@ export default function SiteFooter() {
         <div className="footer-inner">
           {/* IZQUIERDA: Título + Mapa */}
           <div className="foot-col foot-col--map">
-            <h3 className="foot-title">
-              <span className="about__accent">VEN</span> A CONOCERNOS
-            </h3>
+            <h3 className="foot-title">ESTAMOS UBICADOS</h3>
   
             <div className="map-card" aria-label="Ubicación en Google Maps">
               <iframe
-                title="Mapa CentroParque"
+                title="Mapa ParqueArena"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 src={

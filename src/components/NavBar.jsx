@@ -31,8 +31,8 @@ export default function NavBar() {
           <div className={`nav-links ${open ? "is-open" : ""}`}>
             <a href="#inicio" onClick={close}>Inicio</a>
             <a href="#panoramas" onClick={close}>Nuestros Espacios</a>
-            <a href="#eventos" onClick={close}>Nosotros</a>
-            <a href="#about" onClick={close}>Eventos & Panoramas</a>
+            <a href="#about" onClick={close}>Nosotros</a>
+            <a href="#eventos" onClick={close}>Eventos & Panoramas</a>
             <a href="#contacto" onClick={close}>Contacto</a>
           </div>
         </div>

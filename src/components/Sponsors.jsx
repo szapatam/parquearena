@@ -1,35 +1,41 @@
-/* Sponsors.jsx */
-export default function Sponsors() {
-    // Usa tus logos en /public/logos o /src/assets/logos
-    const brands = [
-      { name: "Passline",  href: "#", src: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/RedBullEnergyDrink.svg/1200px-RedBullEnergyDrink.svg.png" },
-      { name: "Undurraga", href: "#", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/2560px-Coca-Cola_logo.svg.png" },
-      { name: "Nanuc",     href: "#", src: "https://cdn.worldvectorlogo.com/logos/logo-spotify.svg" },
-      { name: "IDE Co",    href: "#", src: "https://www.temuco.cl/wp-content/uploads/2022/02/Logo-mun-tco-w500-300x195.png" },
-      { name: "Fedetur",   href: "#", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJc_9WAZocqmIhx9ZOhVXOxoPrfTer3R38w&s" },
-      { name: "Condes",    href: "#", src: "https://wildfiresocial.com/wp-content/uploads/2019/01/amazon-logo-white._cb1509666198_.png" },
-    ];
-  
-    return (
-      <section id="partners" className="section sponsors">
-        <div className="section-inner-sponsor">
-          <div className="section-head">
-            <h2 className="section-title">PARTNERS</h2>
-            <p className="section-kicker">CONOCE NUESTRAS MARCAS ASOCIADAS</p>
-          </div>
-  
-          <ul className="logos">
-            {brands.map((b, i) => (
-              <li key={i} className="logo-card">
-                {/* Si no quieres link, reemplaza <a> por <div> */}
-                <a href={b.href} target="_blank" rel="noreferrer" aria-label={b.name}>
-                  <img className="logo" src={b.src} alt={b.name} loading="lazy" />
-                </a>
-              </li>
-            ))}
-          </ul>
+// SponsorsRibbon.jsx
+export default function SponsorsRibbon() {
+  const brands = [
+    { name: "Vesti",  href: "#", src: "/sponsor1_vestilogoblanco.png" },
+    { name: "Visual_Studio", href: "#", src: "sponsor2_visualstudio.png" },
+    { name: "Coca_Cola",     href: "#", src: "sponsor3_logo_coca_cola_sin_azucar.png" },
+    { name: "Escenarios_Saldia",    href: "#", src: "sponsor4_escenariossaldia.png" },
+  ];
+
+  // Duplicamos contenido para que la animación a -50% sea continua.
+  const loop = [...brands, ...brands];
+
+  return (
+    <section id="partners" className="section sponsors sponsors-ribbon">
+      <div className="section-inner-sponsor">
+        <div className="section-head">
+          <h2 className="section-title">PARTNERS</h2>
+          <p className="section-kicker">CONOCE NUESTRAS MARCAS ASOCIADAS</p>
         </div>
-      </section>
-    );
-  }
-  
+
+        <div className="ribbon-wrap" aria-label="Marcas asociadas">
+          {/* Pista 1 */}
+          <div className="ribbon-track">
+            {loop.map((b, i) => (
+              <a
+                key={`t1-${i}`}
+                href={b.href}
+                target="_blank"
+                rel="noreferrer"
+                className="ribbon-card"
+                aria-label={b.name}
+              >
+                <img src={b.src} alt={b.name} loading="lazy" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,19 +1,19 @@
 const items = [
     {
-      title: 'GOOLFY CENTROPARQUE',
-      date: 'Mes de julio',
+      title: 'EVENTO 1',
+      date: 'FECHA',
       img: 'https://weezevent.com/wp-content/uploads/2023/05/12154322/ideas-tema-fiesta.jpg',
       url: '#'
     },
     {
-      title: 'KIDS ZONE',
-      date: 'Mes de julio',
+      title: 'EVENTO 2',
+      date: 'FECHA',
       img: 'https://media.istockphoto.com/id/661151102/es/foto/discoteca-fiesta-con-confeti.jpg?s=612x612&w=0&k=20&c=wesFLall611TET5-yxf-c4g-fTW5qRtfYismWniNAqM=',
       url: '#'
     },
     {
-      title: 'FIESTA HOY ES HOY',
-      date: '29 de agosto',
+      title: 'EVENTO 3',
+      date: 'FECHA',
       img: 'https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=1600&auto=format&fit=crop',
       url: '#'
     },
@@ -25,7 +25,7 @@ const items = [
         <div className="section-inner">
           <div className="section-head">
             <h2 className="section-title">PRÓXIMOS EVENTOS</h2>
-            <p className="section-kicker">COMPRA TUS ENTRADAS PARA LOS PRÓXIMOS EVENTOS</p>
+            <p className="section-kicker">EL LUGAR DE LOS GRANDES EVENTOS</p>
           </div>
   
           <div className="cards">

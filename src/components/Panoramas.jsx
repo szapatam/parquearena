@@ -5,41 +5,29 @@ import 'swiper/css/navigation';
 
 const items = [
   {
-    title: 'FOOD & BAR',
-    desc: 'Oferta gastronómica en el corazón del parque. ¡Descubre sus sabores!',
+    title: 'ARENA',
+    desc: 'NUESTRO SALÓN PRINCIPAL',
     img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600&auto=format&fit=crop',
     url: '#'
   },
   {
-    title: 'PARQUE ARAUCANO',
-    desc: 'Pulmón verde en medio de la ciudad ¡explora su encanto!',
+    title: 'TERRAZA JARDÍN',
+    desc: 'ejemplo subtitulo',
     img: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Memorial_Derechos_Humanos_en_Parque_Isla_Caut%C3%ADn%2C_Temuco.jpg',
     url: '#'
   },
   {
-    title: 'ENTRETENCIÓN',
-    desc: 'Kidzania, salas de escape, Air-Soft y eventos. ¡Disfruta nuevas experiencias!',
+    title: 'SALA MULTIUSO',
+    desc: 'ejemplo subtitulo',
     img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1600&auto=format&fit=crop',
     url: '#'
   },
   {
-    title: 'EVENTOS',
-    desc: '¡Revisa nuestros próximos eventos!',
+    title: 'PISCINA',
+    desc: 'ejemplo subtitulo',
     img: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop',
     url: '#'
-  },
-  {
-    title: 'EVENTOS',
-    desc: '¡Revisa nuestros próximos eventos!',
-    img: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop',
-    url: '#'
-  },
-  {
-    title: 'EVENTOS',
-    desc: '¡Revisa nuestros próximos eventos!',
-    img: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop',
-    url: '#'
-  },
+  }
 ];
 
 export default function Panoramas(){
@@ -47,8 +35,8 @@ export default function Panoramas(){
     <section id="panoramas" className="section panos">
       <div className="section-inner">
         <div className="section-head">
-          <h2 className="section-title">PANORAMAS</h2>
-          <p className="section-kicker">DESCUBRE LA VIDA EN EL PARQUE ARAUCANO</p>
+          <h2 className="section-title">NUESTROS ESPACIOS</h2>
+          <p className="section-kicker">ejemplo subtitulo</p>
         </div>
 
         <div className='full-bleed'>

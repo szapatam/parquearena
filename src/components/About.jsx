@@ -16,20 +16,14 @@ export default function About() {
         {/* --------- Texto --------- */}
         <div className="about__text">
           <h2 className="about__title">
-            PRIVILEGIADA <span className="about__accent">UBICACIÓN</span><br />
-            ALREDEDOR DEL PARQUE<br /> ARAUCANO
+            {/*<span className="about__accent">UBICACIÓN</span>*/}
+            A LOS PIES <br></br> DEL CORAZÓN DE LA CIUDAD
           </h2>
 
           <p className="about__lead">
-            Estamos emplazados en el Parque Arauco, Las Condes. Un espacio de gran
-            extensión con áreas recreativas, deportivas y culturales para la comunidad.
-            Cerca de hoteles, centros comerciales y el polo empresarial de Santiago.
-            Estamos emplazados en el Parque Arauco, Las Condes. Un espacio de gran
-            extensión con áreas recreativas, deportivas y culturales para la comunidad.
-            Cerca de hoteles, centros comerciales y el polo empresarial de Santiago.
-            Estamos emplazados en el Parque Arauco, Las Condes. Un espacio de gran
-            extensión con áreas recreativas, deportivas y culturales para la comunidad.
-            Cerca de hoteles, centros comerciales y el polo empresarial de Santiago.
+          Estamos emplazados en la salida norte de Temuco, en el radio urbano, a los pies del majestuoso Monumento Natural Cerro Ñielol.
+          Somos un moderno centro de eventos tipo arena, preparado para recibir conciertos, convenciones y todo tipo de actividades, con la más alta eficiencia y tecnología.
+          Además, contamos con un parque urbano de 6.500 m² que ofrece áreas recreativas como piscina, juegos infantiles, zona de picnic y espacios para asados al aire libre, ideales para compartir con amigos, familia o equipos de trabajo.
           </p>
 
           <ul className="about__features">
@@ -38,14 +32,14 @@ export default function About() {
                 {/* Olas / piscina */}
                 <svg viewBox="0 0 24 24"><path fill="currentColor" d="M3 12c1.5 0 2-.75 3-1.5s1.5-1.5 3-1.5s2 .75 3 1.5s1.5 1.5 3 1.5s2-.75 3-1.5s1.5-1.5 3-1.5v2c-1.5 0-2 .75-3 1.5s-1.5 1.5-3 1.5s-2-.75-3-1.5s-1.5-1.5-3-1.5s-2 .75-3 1.5s-1.5 1.5-3 1.5z"/></svg>
               </span>
-              <span className="about__lbl">Amplia piscina</span>
+              <span className="about__lbl">Salón Principal</span>
             </li>
             <li className="about__feature">
               <span className="about__ico" aria-hidden="true">
                 {/* Quincho */}
                 <svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 3l8 5v2H4V8zm-6 7h12v9H6z"/></svg>
               </span>
-              <span className="about__lbl">Quinchos</span>
+              <span className="about__lbl">Terraza Jardín</span>
             </li>
             <li className="about__feature">
               <span className="about__ico" aria-hidden="true">
@@ -59,14 +53,14 @@ export default function About() {
                 {/* Juegos infantiles */}
                 <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6M6 22v-2l6-6l6 6v2z"/></svg>
               </span>
-              <span className="about__lbl">Juegos infantiles</span>
+              <span className="about__lbl">Piscina</span>
             </li>
             <li className="about__feature">
               <span className="about__ico" aria-hidden="true">
                 {/* Lavandería */}
                 <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h16v18H4zM7 6h10v2H7zM8 12a4 4 0 1 0 8 0"/></svg>
               </span>
-              <span className="about__lbl">Lavandería</span>
+              <span className="about__lbl">Área de Picnik</span>
             </li>
             <li className="about__feature">
               <span className="about__ico" aria-hidden="true">
