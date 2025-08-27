@@ -18,7 +18,7 @@ export default function About() {
           <h2 className="about__title">
             {/*<span className="about__accent">UBICACIÓN</span>*/}
             A LOS PIES <br></br> DEL CORAZÓN DE LA CIUDAD
-          </h2>
+          </h2> 
 
           <p className="about__lead">
           Estamos emplazados en la salida norte de Temuco, en el radio urbano, a los pies del majestuoso Monumento Natural Cerro Ñielol.

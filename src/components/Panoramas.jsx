@@ -63,7 +63,7 @@ export default function Panoramas(){
             </SwiperSlide>
           ))}
         </Swiper>
-        </div>
+        </div> 
       </div>
 
       {/* flecha al siguiente bloque

@@ -573,7 +573,7 @@ body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#0c0c0c;
   
 }
 
-.foot-brand{
+.foot-brand{ 
   width: clamp(140px, 18vw, 300px);
   object-fit: contain;
   opacity:.95;

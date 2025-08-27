@@ -3,7 +3,7 @@ const items = [
       title: 'EVENTO 1',
       date: 'FECHA',
       img: 'https://weezevent.com/wp-content/uploads/2023/05/12154322/ideas-tema-fiesta.jpg',
-      url: '#'
+      url: '#' 
     },
     {
       title: 'EVENTO 2',

@@ -25,7 +25,7 @@ export default function NavBar() {
           onClick={() => setOpen((v) => !v)}
         >
           <img src="menu-logo.png" alt="menu-logo" />
-        </button>
+        </button> 
 
           {/* Links (desktop visibles / móvil panel deslizante) */}
           <div className={`nav-links ${open ? "is-open" : ""}`}>

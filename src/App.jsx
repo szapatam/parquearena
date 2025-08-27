@@ -8,7 +8,7 @@ import Sponsors from './components/Sponsors';
 import SiteFooter from './components/SiteFooter';
 
 export default function App(){
-  return (
+  return ( 
     <>
       <NavBar/>
       <Hero/>

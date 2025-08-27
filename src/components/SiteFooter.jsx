@@ -10,7 +10,7 @@ export default function SiteFooter() {
             <div className="map-card" aria-label="Ubicación en Google Maps">
               <iframe
                 title="Mapa ParqueArena"
-                loading="lazy"
+                loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
                 src={
                   "https://www.google.com/maps?q=CentroParque%2C%20Pdte%20Riesco%205330%2C%20Las%20Condes&output=embed"

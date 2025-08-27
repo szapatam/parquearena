@@ -4,7 +4,7 @@ export default function Hero() {
         {/* Usa /public/hero.mp4. Si no tienes video aún, añade cualquier mp4 con ese nombre */}
         <video autoPlay muted loop playsInline>
           <source src="/hero.mp4" type="video/mp4" />
-        </video>
+        </video> 
   
         <div className="content">
           <img src="parquearena_logo_blanco.png" alt="Parque Arena Logo" />

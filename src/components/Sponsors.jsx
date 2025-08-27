@@ -9,7 +9,7 @@ export default function SponsorsRibbon() {
 
   // Duplicamos contenido para que la animación a -50% sea continua.
   const loop = [...brands, ...brands];
-
+ 
   return (
     <section id="partners" className="section sponsors sponsors-ribbon">
       <div className="section-inner-sponsor">
