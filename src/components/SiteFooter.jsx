@@ -3,7 +3,7 @@ export default function SiteFooter() {
     return (
       <footer id="contacto" className="footer">
         <div className="footer-inner">
-          {/* IZQUIERDA: Título + Mapa */} 
+          {/* IZQUIERDA: Título + Mapa */}
           <div className="foot-col foot-col--map">
             <h3 className="foot-title">ESTAMOS UBICADOS</h3>
   
