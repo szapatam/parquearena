@@ -34,6 +34,7 @@ export default function NavBar() {
             <a href="#about" onClick={close}>Nosotros</a>
             <a href="#eventos" onClick={close}>Eventos & Panoramas</a>
             <a href="#contacto" onClick={close}>Contacto</a>
+            <a href="#contacto" className="btn-cotiza" onClick={close}>Organiza tus eventos AQUÍ!</a>
           </div>
         </div>
 
